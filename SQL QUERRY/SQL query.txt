@@ -1,0 +1,168 @@
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bcits              |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.02 sec)
+
+mysql> USE BCITS;
+Database changed
+----------------------------------------------------------------------------------------------------------------------------------------------
+2.WAQ TO DISPLAY ALL THE RECORDS OF EMPLOYEE_INFO TABLE.
+
+
+mysql> SELECT * FROM EMPLOYEE_INFO;
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+3.WAQ TO FIND THE UNIQUE DEPARTMENT I'D FROM EMPLOYEE_INFO TABLE.
+
+
+mysql> SELECT DISTINCT DEPTID
+    -> FROM EMPLOYEE_INFO;
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+5.WAQ TO DISPLAY UNIQUE DEPARTMENT ID AS WELL AS DESIGNATION.
+
+
+
+mysql> SELECT DISTINCT DEPTID,DESIGNATION
+    -> FROM EMPLOYEE_INFO;
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+6.WAQ TO DISPLAY ALL THE RECORDS WHO ARE WORKING AS A DEVLOPER.
+
+
+
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE DESIGNATION='DEVLOPER';
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+7.WAQ TO DISPLAY NAME,MOBILENO WHOSE SALARY IS MORE THAN 50000.
+
+
+mysql> SELECT NAME,MOBILENO
+    -> FROM EMPLOYEE_INFO
+    -> WHERE SALARY>50000;
+
+7.1 WAQ TO DISPLAY NAME,MOBILENO WHOSE SALARY IS MORE THAN 15000.
+
+
+mysql> SELECT NAME,MOBILENO
+    -> FROM EMPLOYEE_INFO
+    -> WHERE SALARY>15000;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8. WAQ TO DISPLAY THE ANNUAL SALARY OF ALL EMPLOYEES.
+
+mysql> SELECT SALARY*12
+    -> FROM EMPLOYEE_INFO;
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9.WAQ TO DISPLAY THE ALL THE RECORDS OF EMPLOYEE WHO IS WORKING AS DEVLOPER IN DEPARTMENT 10.
+
+
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE DESIGNATION='DEVLOPER' AND DEPTID=10;
+Empty set (0.05 sec)
+
+
+9.1 WAQ TO DISPLAY WHOSE DESIGNATION IS TESTER AND DATE OF JOINING AFTER 2015
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE DESIGNATION='TESTER' AND DOJ>'2015-12-31';
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10.WAQ TO DISPLAY WHOSE DESIGNATION IS TESTER AND DATE OF JOINING AFTER 2015.
+
+
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE DESIGNATION='TESTER' AND DOJ>'2015-12-31';
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11. WAQ TO DISPLAY ALL THE DETAILS WHO ARE WORKING IN DEPTID 10 OR WHOSE DESIGNATION IS HR.
+
+
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE DEPTID=10 OR DESIGNATION='HR';
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12.WAQ TO DISPLAY NAME AND EMAILID WHO ARE WORKING AS A TESTER OR ANALYST OR DEVLOPER.
+
+mysql> SELECT NAME,EMAILID
+    -> FROM EMPLOYEE_INFO
+    -> WHERE DESIGNATION IN('TESTER','ANALYST','DEVLOPER');
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13.WAQ TO DISPLAY ALL THE DETAILS EXCEPT ANALYST.
+
+
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE DESIGNATION!='ANALYST';
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14.
+
+
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE NOT DESIGNATION='ANALYST';
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15.WAQ TO DISPLAY ALL THE RECORDS OF THE EMPLOYEE WHO ARE NOT WORKING IN DEPARTMENT ID 10,20 AND 30.
+
+
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE NOT DEPTID IN(10,20,30);
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16.WAQ TO DISPLAY ALL THE RECORDS OF THE EMPLOYEE WHO ARE NOT WORKING IN DEPARTMENT ID 10,20 AND 30.
+
+
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE DEPTID!=10 OR DEPTID!=20 OR DEPTID!=30;
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+17.WAQ TO DSPLAY ALL THE EMPLOYEE EXCLUDING TESTER WHO IS WORKING IN DEPARTMENT ID 40.
+
+
+mysql> SELECT *
+    -> FROM EMPLOYEE_INFO
+    -> WHERE NOT (DESIGNATION='TESTER' AND DEPTID=40);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+18. WAQ TO DIPLAY ALL THE DISPLAY WHOSE SALARY RANGE BETWEEN 19000 AND 60000.
+
+
+
+mysql> SELECT * FROM EMPLOYEE_INFO WHERE SALARY BETWEEN 19000 AND 60000;
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+

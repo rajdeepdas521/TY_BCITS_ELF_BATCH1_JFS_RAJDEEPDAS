@@ -1,0 +1,156 @@
+1.show databases;          //COMMAND FOR HOW MANY DATABASE IS THERE.
++--------------------+
+
+----------------------------------------------------------------------------------------------------
+2.
+mysql> CREATE DATABASE BCITS;         //DATABASE CREATION HOW TO CREATE DATABASE
+
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bcits              |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.
+
+mysql> DESC STUDENT_INFO;     // FOR DESCRIBE THE TABLE IS CREATED 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.  INSERT COMMAND ///
+
+mysql> INSERT INTO STUDENT_INFO(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(101,'RAJDEEP',983555425,60.23,'RJ@GMAIL.COM');
+
+
+mysql> INSERT INTO STUDENT_INFO(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(102,'VIRAT',90005425,70.23,'VR@GMAIL.COM');
+
+
+mysql> INSERT INTO STUDENT_INFO(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(103,'DHONI',900012345,80.23,'MSD@GMAIL.COM');
+
+
+mysql> INSERT INTO STUDENT_INFO(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(104,'DABD',900088885,78.23,'ABD@GMAIL.COM');
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. 
+
+mysql> SELECT * FROM STUDENT_INFO;
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.//ADD A COLUMN ALTER COMMAND 
+mysql> ALTER TABLE STUDENT_INFO ADD LOC VARCHAR(10);
+
+mysql> SELECT * FROM STUDENT_INFO;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8.
+mysql> CREATE DATABASE ABCD;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> DROP DATABASE ABCD;
+Query OK, 0 rows affected (0.13 sec)
+
+=============================================================================================================================================================================================
+9.
+ INSERT INTO STUDENT(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(106,'VIRAT',561664005,56.23,'VK@GMAIL.COM');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> SELECT * FROM STUDENT;
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.
+
+mysql> SELECT DISTINCT * FROM STUDENT;
+
+
+mysql> SELECT DISTINCT NAME  FROM STUDENT;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+1.1
+
+mysql> SELECT DISTINCT NAME,MARKS  FROM STUDENT;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+1.2
+
+mysql> SELECT NAME AS SNAME FROM STUDENT;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.3
+mysql> SELECT 5+6;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.4
+
+
+sql> CREATE TABLE EMPLOYEE_INFO(EID INT PRIMARY KEY,NAME VARCHAR(150),MOBILENO BIGINT NOT NULL,
+    ->     EMAILID VARCHAR(150), DOB DATE,DESIGNATION VARCHAR(150) ,SALARY DOUBLE(8,2),DEPTID INT,DOJ DATE,BLOODGROUP VARCHAR(200),GENDOR VARCHAR(300));
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.5
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(10,'ANUJ',9834265234,'anujJ@gmail.com','1997-04-12','TESTER',12000.12,10,
+    -> '2012-2-21','B+VE','MALE');
+
+
+
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(11,'POOJA',8834445235,'pooja@gmail.com','1996-06-11','DEVLOPER',18000.12,20,
+    -> '2016-4-25','B+VE','FEMALE');
+
+
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(12,'RAJDEEP',6833245265,'rajdeep@gmail.com','1997-06-21','DEVLOPER',32000,20,
+    -> '2020-2-12','B+VE','MALE');
+
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(13,'AMIT',7831295245,'amit@gmail.com','1995-09-14','DEVLOPER',15000,30,
+    -> '2016-8-13','B+VE','MALE');
+
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(14,'JEEVAN',8835595245,'jvn@gmail.com','1996-10-19','HR',15800,40,
+    -> '2014-5-21','AB+VE','MALE');
+
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(15,'SHRUTI',9565595291,'shtti@gmail.com','1996-4-23','ANALYST',19900.50,10,
+    -> '2013-7-11','O+VE','FEMALE');
+
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(16,'JYOTI',6565595990,'jyoti@gmail.com','1992-6-12','MANAGER',54900,40,
+    -> '2010-7-30','O+VE','FEMALE');
+
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(17,'VIRAT',6565591234,'vikk@gmail.com','1997-2-2','DEVLOPER',14000,20,
+    -> '2018-7-10','A-VE','MALE');
+
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(18,'DEEPAK',8965594321,'deep@gmail.com','1997-12-22','TESTER',24000,10,
+    -> '2017-5-30','A+VE','MALE');
+
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(19,'JUHI',6965595702,'juhi@gmail.com','1997-05-14','HR',34000,30,
+    -> '2017-5-22','A+VE','FEMALE');
+
+
+
+mysql> SELECT * FROM EMPLOYEE_INFO;
