@@ -1,0 +1,276 @@
+1.show databases;          //COMMAND FOR HOW MANY DATABASE IS THERE.
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.
+mysql> CREATE DATABASE BCITS;         //DATABASE CREATION HOW TO CREATE DATABASE
+
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bcits              |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.
+
+mysql> DESC STUDENT_INFO;     // FOR DESCRIBE THE TABLE IS CREATED 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.  INSERT COMMAND ///
+
+mysql> INSERT INTO STUDENT_INFO(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(101,'RAJDEEP',983555425,60.23,'RJ@GMAIL.COM');
+
+
+mysql> INSERT INTO STUDENT_INFO(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(102,'VIRAT',90005425,70.23,'VR@GMAIL.COM');
+
+
+mysql> INSERT INTO STUDENT_INFO(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(103,'DHONI',900012345,80.23,'MSD@GMAIL.COM');
+
+
+mysql> INSERT INTO STUDENT_INFO(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(104,'DABD',900088885,78.23,'ABD@GMAIL.COM');
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. 
+
+mysql> SELECT * FROM STUDENT_INFO;
++-----+---------+-----------+-------+---------------+
+| SID | NAME    | MOBILENO  | MARKS | EMAIL         |
++-----+---------+-----------+-------+---------------+
+| 101 | RAJDEEP | 983555425 | 60.23 | RJ@GMAIL.COM  |
+| 102 | VIRAT   |  90005425 | 70.23 | VR@GMAIL.COM  |
+| 103 | DHONI   | 900012345 | 80.23 | MSD@GMAIL.COM |
+| 104 | DABD    | 900088885 | 78.23 | ABD@GMAIL.COM |
++-----+---------+-----------+-------+---------------+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.//ADD A COLUMN ALTER COMMAND 
+mysql> ALTER TABLE STUDENT_INFO ADD LOC VARCHAR(10);
+
+mysql> SELECT * FROM STUDENT_INFO;
++-----+---------+-----------+-------+---------------+------+
+| SID | NAME    | MOBILENO  | MARKS | EMAIL         | LOC  |
++-----+---------+-----------+-------+---------------+------+
+| 101 | SACHIN  | 981423485 | 62.23 | SIN@GMAIL.COM | NULL |
+| 102 | RAJDEEP | 781333485 | 90.23 | RAJ@GMAIL.COM | NULL |
+| 103 | ABD     | 781339885 | 70.23 | ABD@GMAIL.COM | NULL |
+| 104 | DHONI   | 681224885 | 88.23 | MSD@GMAIL.COM | NULL |
+| 105 | VIRAT   | 561664005 | 56.23 | VK@GMAIL.COM  | NULL |
++-----+---------+-----------+-------+---------------+------+
+
+================================================================================================================================================-----------------------------------------------
+7.//DROP A COLUMN BY ALTER COMMAND
+mysql> ALTER TABLE STUDENT_INFO DROP COLUMN LOC;
+
+mysql> SELECT * FROM STUDENT_INFO;
++-----+---------+-----------+-------+---------------+
+| SID | NAME    | MOBILENO  | MARKS | EMAIL         |
++-----+---------+-----------+-------+---------------+
+| 101 | SACHIN  | 981423485 | 62.23 | SIN@GMAIL.COM |
+| 102 | RAJDEEP | 781333485 | 90.23 | RAJ@GMAIL.COM |
+| 103 | ABD     | 781339885 | 70.23 | ABD@GMAIL.COM |
+| 104 | DHONI   | 681224885 | 88.23 | MSD@GMAIL.COM |
+| 105 | VIRAT   | 561664005 | 56.23 | VK@GMAIL.COM  |
++-----+---------+-----------+-------+---------------+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8.
+mysql> CREATE DATABASE ABCD;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> DROP DATABASE ABCD;
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| bcits              |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.01 sec)
+
+==============================================================================================================================================================================================
+9.
+ INSERT INTO STUDENT(SID,NAME,MOBILENO,MARKS,EMAIL) VALUES(106,'VIRAT',561664005,56.23,'VK@GMAIL.COM');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> SELECT * FROM STUDENT;
++-----+---------+-----------+-------+---------------+
+| SID | NAME    | MOBILENO  | MARKS | EMAIL         |
++-----+---------+-----------+-------+---------------+
+| 101 | SACHIN  | 981423485 | 62.23 | SIN@GMAIL.COM |
+| 102 | RAJDEEP | 781333485 | 90.23 | RAJ@GMAIL.COM |
+| 103 | ABD     | 781339885 | 70.23 | ABD@GMAIL.COM |
+| 104 | DHONI   | 681224885 | 88.23 | MSD@GMAIL.COM |
+| 105 | VIRAT   | 561664005 | 56.23 | VK@GMAIL.COM  |
+| 106 | VIRAT   | 561664005 | 56.23 | VK@GMAIL.COM  |
++-----+---------+-----------+-------+---------------+
+6 rows in set (0.00 sec)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.
+
+mysql> SELECT DISTINCT * FROM STUDENT;
++-----+---------+-----------+-------+---------------+
+| SID | NAME    | MOBILENO  | MARKS | EMAIL         |
++-----+---------+-----------+-------+---------------+
+| 101 | SACHIN  | 981423485 | 62.23 | SIN@GMAIL.COM |
+| 102 | RAJDEEP | 781333485 | 90.23 | RAJ@GMAIL.COM |
+| 103 | ABD     | 781339885 | 70.23 | ABD@GMAIL.COM |
+| 104 | DHONI   | 681224885 | 88.23 | MSD@GMAIL.COM |
+| 105 | VIRAT   | 561664005 | 56.23 | VK@GMAIL.COM  |
+| 106 | VIRAT   | 561664005 | 56.23 | VK@GMAIL.COM  |
++-----+---------+-----------+-------+---------------+
+6 rows
+
+mysql> SELECT DISTINCT NAME  FROM STUDENT;
++---------+
+| NAME    |
++---------+
+| SACHIN  |
+| RAJDEEP |
+| ABD     |
+| DHONI   |
+| VIRAT   |
++---------+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+1.1
+
+mysql> SELECT DISTINCT NAME,MARKS  FROM STUDENT;
++---------+-------+
+| NAME    | MARKS |
++---------+-------+
+| SACHIN  | 62.23 |
+| RAJDEEP | 90.23 |
+| ABD     | 70.23 |
+| DHONI   | 88.23 |
+| VIRAT   | 56.23 |
++---------+-------+
+5 rows in set (0.00 sec)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+1.2
+
+mysql> SELECT NAME AS SNAME FROM STUDENT;
++---------+
+| SNAME   |
++---------+
+| SACHIN  |
+| RAJDEEP |
+| ABD     |
+| DHONI   |
+| VIRAT   |
+| VIRAT   |
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.3
+mysql> SELECT 5+6;
+
+| 5+6 |
++-----+
+|  11 |
++-----+
+1 row in set (0.00 sec)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.4
+sql> CREATE TABLE EMPLOYEE_INFO(EID INT PRIMARY KEY,NAME VARCHAR(150),MOBILENO BIGINT NOT NULL,
+    ->     EMAILID VARCHAR(150), DOB DATE,DESIGNATION VARCHAR(150) ,SALARY DOUBLE(8,2),DEPTID INT,DOJ DATE,BLOODGROUP VARCHAR(200),GENDOR VARCHAR(300));
+Query OK, 0 rows affected (0.47 sec)
+
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| EID         | int(11)      | NO   | PRI | NULL    |       |
+| NAME        | varchar(150) | YES  |     | NULL    |       |
+| MOBILENO    | bigint(20)   | NO   |     | NULL    |       |
+| EMAILID     | varchar(150) | YES  |     | NULL    |       |
+| DOB         | date         | YES  |     | NULL    |       |
+| DESIGNATION | varchar(150) | YES  |     | NULL    |       |
+| SALARY      | double(8,2)  | YES  |     | NULL    |       |
+| DEPTID      | int(11)      | YES  |     | NULL    |       |
+| DOJ         | date         | YES  |     | NULL    |       |
+| BLOODGROUP  | varchar(200) | YES  |     | NULL    |       |
+| GENDOR      | varchar(300) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.5
+
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(10,'ANUJ',9834265234,'anujJ@gmail.com','1997-04-12','TESTER',12000.12,10,
+    -> '2012-2-21','B+VE','MALE');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(11,'POOJA',8834445235,'pooja@gmail.com','1996-06-11','DEVLOPER',18000.12,20,
+    -> '2016-4-25','B+VE','FEMALE');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(12,'RAJDEEP',6833245265,'rajdeep@gmail.com','1997-06-21','DEVLOPER',32000,20,
+    -> '2020-2-12','B+VE','MALE');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(13,'AMIT',7831295245,'amit@gmail.com','1995-09-14','DEVLOPER',15000,30,
+    -> '2016-8-13','B+VE','MALE');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(14,'JEEVAN',8835595245,'jvn@gmail.com','1996-10-19','HR',15800,40,
+    -> '2014-5-21','AB+VE','MALE');
+Query OK, 1 row affected (0.36 sec)
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(15,'SHRUTI',9565595291,'shtti@gmail.com','1996-4-23','ANALYST',19900.50,10,
+    -> '2013-7-11','O+VE','FEMALE');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(16,'JYOTI',6565595990,'jyoti@gmail.com','1992-6-12','MANAGER',54900,40,
+    -> '2010-7-30','O+VE','FEMALE');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(17,'VIRAT',6565591234,'vikk@gmail.com','1997-2-2','DEVLOPER',14000,20,
+    -> '2018-7-10','A-VE','MALE');
+Query OK, 1 row affected (0.16 sec)
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(18,'DEEPAK',8965594321,'deep@gmail.com','1997-12-22','TESTER',24000,10,
+    -> '2017-5-30','A+VE','MALE');
+Query OK, 1 row affected (0.14 sec)
+
+mysql> INSERT INTO EMPLOYEE_INFO(EID,NAME,MOBILENO,EMAILID,DOB,DESIGNATION,SALARY,DEPTID,DOJ,BLOODGROUP,GENDOR) VALUES(19,'JUHI',6965595702,'juhi@gmail.com','1997-05-14','HR',34000,30,
+    -> '2017-5-22','A+VE','FEMALE');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> SELECT * FROM EMPLOYEE_INFO;
++-----+---------+------------+-------------------+------------+-------------+----------+--------+------------+------------+--------+
+| EID | NAME    | MOBILENO   | EMAILID           | DOB        | DESIGNATION | SALARY   | DEPTID | DOJ        | BLOODGROUP | GENDOR |
++-----+---------+------------+-------------------+------------+-------------+----------+--------+------------+------------+--------+
+|  10 | ANUJ    | 9834265234 | anujJ@gmail.com   | 1997-04-12 | TESTER      | 12000.12 |     10 | 2012-02-21 | B+VE       | MALE   |
+|  11 | POOJA   | 8834445235 | pooja@gmail.com   | 1996-06-11 | DEVLOPER    | 18000.12 |     20 | 2016-04-25 | B+VE       | FEMALE |
+|  12 | RAJDEEP | 6833245265 | rajdeep@gmail.com | 1997-06-21 | DEVLOPER    | 32000.00 |     20 | 2020-02-12 | B+VE       | MALE   |
+|  13 | AMIT    | 7831295245 | amit@gmail.com    | 1995-09-14 | DEVLOPER    | 15000.00 |     30 | 2016-08-13 | B+VE       | MALE   |
+|  14 | JEEVAN  | 8835595245 | jvn@gmail.com     | 1996-10-19 | HR          | 15800.00 |     40 | 2014-05-21 | AB+VE      | MALE   |
+|  15 | SHRUTI  | 9565595291 | shtti@gmail.com   | 1996-04-23 | ANALYST     | 19900.50 |     10 | 2013-07-11 | O+VE       | FEMALE |
+|  16 | JYOTI   | 6565595990 | jyoti@gmail.com   | 1992-06-12 | MANAGER     | 54900.00 |     40 | 2010-07-30 | O+VE       | FEMALE |
+|  17 | VIRAT   | 6565591234 | vikk@gmail.com    | 1997-02-02 | DEVLOPER    | 14000.00 |     20 | 2018-07-10 | A-VE       | MALE   |
+|  18 | DEEPAK  | 8965594321 | deep@gmail.com    | 1997-12-22 | TESTER      | 24000.00 |     10 | 2017-05-30 | A+VE       | MALE   |
+|  19 | JUHI    | 6965595702 | juhi@gmail.com    | 1997-05-14 | HR          | 34000.00 |     30 | 2017-05-22 | A+VE       | FEMALE |
++-----+---------+------------+-------------------+------------+-------------+----------+--------+------------+------------+--------+
+10 rows in set (0.00 sec)
