@@ -1,0 +1,16 @@
+
+Field            Type          Collation          Null    Key     Default  Extra   Privileges                       Comment
+---------------  ------------  -----------------  ------  ------  -------  ------  -------------------------------  -------
+EMPID            int(11)       (NULL)             NO      PRI     (NULL)           select,insert,update,references         
+NAME             varchar(200)  latin1_swedish_ci  YES             (NULL)           select,insert,update,references         
+MOBILENO         mediumtext    latin1_swedish_ci  YES             (NULL)           select,insert,update,references         
+OFFICIAL_MAILID  varchar(200)  latin1_swedish_ci  YES             (NULL)           select,insert,update,references         
+DOB              date          (NULL)             YES             (NULL)           select,insert,update,references         
+DOJ              date          (NULL)             YES             (NULL)           select,insert,update,references         
+DESIGNATION      varchar(200)  latin1_swedish_ci  YES             (NULL)           select,insert,update,references         
+BLOODGROUP       varchar(200)  latin1_swedish_ci  YES             (NULL)           select,insert,update,references         
+SALARY           double        (NULL)             YES             (NULL)           select,insert,update,references         
+DEPTID           int(11)       (NULL)             YES             (NULL)           select,insert,update,references         
+MANAGERID        int(11)       (NULL)             YES             (NULL)           select,insert,update,references         
+
+/*Index Information For - employee_management_info.employee_primary_info*/
