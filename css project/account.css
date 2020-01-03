@@ -1,0 +1,38 @@
+form{
+    background-color: rgb(27, 44, 97);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+h1{
+    background-color: rgb(27, 44, 97);
+    text-align: center;
+    color: white;
+    padding-right: 262px;
+    padding-top: 50px;
+
+}
+input[type="text"] , input[type="password"] , input[type="email"]{
+         width: 500px;
+         height: 20px;
+         background-color: black;
+         /* padding: 10px; */
+         margin: 10px;
+         border: 1px solid gray;
+}
+label{
+    color: honeydew;
+    padding-right: 11px;
+}
+input[type="file"]{
+    padding-right: 122px;
+    color: white;
+}
+input[type="submit"]{
+    width: 504px;
+    background-color: rgb(57, 171, 241);
+    margin-top: 10px;
+    color: white;
+    border: 1px solid skyblue;
+}

@@ -1,0 +1,12 @@
+img{
+    width: 340px;
+    height: 300px;
+    border: 1px solid black;
+    transition: all 1s;
+    padding: 10px;
+}
+img:hover{
+ /* transform: scale(1.2,1.2);  */
+/* transform: scale3d(1.2,1.2);*/
+transform: translate(50px,50px);
+} 

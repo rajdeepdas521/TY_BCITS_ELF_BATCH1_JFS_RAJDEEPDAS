@@ -1,0 +1,36 @@
+form{
+    background-color: rgb(36, 35, 35, 0.925);
+    height: 360px;
+    text-align: center;
+    padding-top: 34px;
+    margin: auto;
+}
+h2{
+    color: white;
+}
+input[type="email"] , input[type="password"]{
+    width: 400px;
+    height: 20px;
+    background-color: rgb(36, 35, 35, 0.925);
+    border-width: 5px solid black;
+    margin-bottom: 20px;
+}
+input[type="button"]{
+    width: 200px;
+    background-color: rgb(4, 163, 110);
+    color: white;
+    height: 39px;
+    border:1px solid  rgb(36, 35, 35, 0.925) ;
+}
+input[type="submit"]{
+    width: 405px;
+    background-color: rgb(4, 163, 110);
+    color: white;
+    height: 43px;
+    border:1px solid  rgb(36, 35, 35, 0.925) ;
+}
+input[type="text"]{
+    width: 197px;
+    height: 20px;
+    background-color: rgb(36, 35, 35, 0.925);
+}

@@ -1,0 +1,37 @@
+
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+form{
+  background-color: rgb(248, 130, 34);
+    width: 500px;
+    height: 247px;
+    text-align: center;
+    padding-top: 46px;
+    margin-left: 300px;
+    
+}
+h1{
+    color: white;
+    
+}
+h3{
+    color: white;
+    padd
+}
+input[type="button"]{
+    height: 27px;
+    background-color: rgb(233, 64, 182);
+    border : 1px ;
+    outline: none;
+    color: white;
+    margin-left: -6px;
+}
+   
+    
+input[type="text"]{
+    width: 300px;
+    height: 20px;
+}
