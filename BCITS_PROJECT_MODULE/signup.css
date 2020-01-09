@@ -1,0 +1,63 @@
+h1{
+    width: 1440px;
+    height: 122px;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+h2{
+    text-align: center;
+    width: 1489px;
+    height: 84px;
+color: ghostwhite;
+}
+h4{
+    color: white;
+}
+body{
+    background-image: url(/images/electricty.jpg);
+    background-size: cover;
+}
+form{
+    
+    text-align: center;
+    margin-top: 20px; 
+}
+input[type='text']{
+    width: 250px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+input[type='password 1']{
+    width: 250px;
+    margin-top: -9px;
+    margin-left: 39px;
+}
+
+input[type='password 2']{
+    width: 250px;
+    margin-top: -9px;
+    margin-left: 50px;
+  
+      
+}
+input[type='submit']{
+    margin-top: 15px;
+    background-color: rgb(25, 61, 97);
+    border-color: rgb(25, 61, 97);
+    color: white;
+}
+div{
+    text-align: center;
+    color:white;
+}
+input[type='button']{
+    width: 91px;
+    background-color: rgb(25, 61, 97);
+    color: white;
+    margin-bottom: 20px;
+    border-color:  rgb(25, 61, 97);
+    border-radius: 1px;
+}
+
+
