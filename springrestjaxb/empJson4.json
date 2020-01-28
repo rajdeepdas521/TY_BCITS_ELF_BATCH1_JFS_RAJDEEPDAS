@@ -1,0 +1,25 @@
+{
+	"name": "Raghu",
+	"designation": "SoftWare Developer",
+	"joiningDate": 1580210384622,
+	"mobile": 8986826174,
+	"officialmailId": "raghu@gmail.com",
+	"dob": 1580210384622,
+	"bloodgroup": "B+ve",
+	"salary": 30000.0,
+	"managerId": 20,
+	"password": null,
+	"userOtherInfoBean": {
+		"gender": "Male",
+		"aadharNumber": 123456789
+	},
+	"addressBean": {
+		"street": null,
+		"city": "BLR",
+		"addressType": "t",
+		"houseNumber": 55
+	},
+	"userAddressList": null,
+	"employeeId": 2222,
+	"departmentId": 22
+}

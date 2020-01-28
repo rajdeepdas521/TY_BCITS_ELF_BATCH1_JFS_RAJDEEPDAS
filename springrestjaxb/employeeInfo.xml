@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Employee-info>
+    <employee-id>100</employee-id>
+    <name>Rajdeep</name>
+    <department-id>20</department-id>
+    <designation>SSD</designation>
+    <joiningDate>2020-01-28T12:29:53.989+05:30</joiningDate>
+    <mobile>7991153890</mobile>
+    <officialmailId>rajdeep842@gmail.com</officialmailId>
+    <dob>2020-01-28T12:29:53.989+05:30</dob>
+    <bloodgroup>b+</bloodgroup>
+    <salary>500000.0</salary>
+    <managerId>10</managerId>
+    <password>qwerty</password>
+</Employee-info>

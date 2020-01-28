@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<user-info user-id="9999" name="Rajdeep Das">
+    <department-id>22</department-id>
+    <designation>SSD</designation>
+    <joiningDate>2020-01-28T13:43:32.798+05:30</joiningDate>
+    <mobile>8986826174</mobile>
+    <officialmailId>rajdeep@gmail.com</officialmailId>
+    <dob>2020-01-28T13:43:32.798+05:30</dob>
+    <bloodgroup>B+</bloodgroup>
+    <salary>99999.0</salary>
+    <managerId>20</managerId>
+    <user-other-info>
+        <gender>Male</gender>
+        <aadharNumber>123456789</aadharNumber>
+    </user-other-info>
+    <user-address-list>
+        <userAddressList>
+            <house-number>5</house-number>
+            <street>XYZ street</street>
+            <city>HYD</city>
+            <address-type>112</address-type>
+        </userAddressList>
+        <userAddressList>
+            <house-number>1</house-number>
+            <street>abc street</street>
+            <city>BLR</city>
+            <address-type>116</address-type>
+        </userAddressList>
+    </user-address-list>
+</user-info>

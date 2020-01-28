@@ -1,0 +1,13 @@
+{
+	"employeeID": 100,
+	"name": "Rajdeep",
+	"salary": 500000.0,
+	"designation": "SSD",
+	"joiningDate": 1580208291897,
+	"mobile": 7991153890,
+	"officialmailId": "rajdeep842@gmail.com",
+	"dob": 1580208291897,
+	"bloodgroup": "b+",
+	"managerId": 10,
+	"departmentID": 20
+}
